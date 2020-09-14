@@ -1,0 +1,6 @@
+framework module HTTPClient {
+  umbrella header "httpclient-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Sounds-App-Storyboard/Pods-Sounds-App-Storyboard-frameworks.sh
+${BUILT_PRODUCTS_DIR}/httpclient-ios/HTTPClient.framework
+${BUILT_PRODUCTS_DIR}/mediaselector-client-ios/MediaSelector.framework
+${BUILT_PRODUCTS_DIR}/smp-ios/SMP.framework

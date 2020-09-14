@@ -1,0 +1,6 @@
+framework module SMP {
+  umbrella header "smp-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

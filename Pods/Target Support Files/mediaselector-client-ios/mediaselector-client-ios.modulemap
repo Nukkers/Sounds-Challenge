@@ -1,0 +1,6 @@
+framework module MediaSelector {
+  umbrella header "mediaselector-client-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
