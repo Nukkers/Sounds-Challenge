@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
         
         let myId = soundsData?.id
         VPID = myId
-        
+
         let playerItemProvider =
             MediaSelectorItemProviderBuilder(
                 VPID: VPID!,
@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
                 streamType: .simulcast,
                 avStatisticsConsumer: MiniSoundsStatisticsProvider()
             ).buildItemProvider()
-        
+
         player =
             BBCSMPPlayerBuilder
                 .init()
@@ -48,7 +48,7 @@ class DetailViewController: UIViewController {
     
     func setUI() {
         SoundDetailLabel.text = soundsData?.titles.primary
-        
+
         // Load the image from remote URL
         if let url = URL(string: soundsData!.image_url){
             SoundImageView.load(url: url)
