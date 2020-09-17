@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stations View Controller-->
         <scene sceneID="x3k-tA-sv8">
             <objects>
-                <viewController id="NsK-28-Lzc" customClass="ViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NsK-28-Lzc" customClass="StationsViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp7-MG-nP9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayableItemCell" rowHeight="150" id="lAU-TJ-hjG" customClass="PlayableItemCell" customModule="Sounds_App_Storyboard" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="150" id="lAU-TJ-hjG" customClass="StationCell" customModule="Sounds_App_Storyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lAU-TJ-hjG" id="Ta1-J8-QEA">
@@ -69,9 +69,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ImageView" destination="Xbf-kU-SJR" id="1Go-hX-eQ2"/>
-                                            <outlet property="SubtitleLabel" destination="VhK-D9-RTb" id="RYr-K6-w4c"/>
-                                            <outlet property="TitleLabel" destination="bHY-nj-Ud8" id="Wbx-G6-cdZ"/>
+                                            <outlet property="imageView" destination="Xbf-kU-SJR" id="1Go-hX-eQ2"/>
+                                            <outlet property="subtitleLabel" destination="VhK-D9-RTb" id="RYr-K6-w4c"/>
+                                            <outlet property="titleLabel" destination="bHY-nj-Ud8" id="Wbx-G6-cdZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

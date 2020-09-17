@@ -8,39 +8,20 @@
 
 import UIKit
 
+protocol DisplayablesUpdatedDelegate: class {
+    func displayablesUpdated()
+}
 
-
-public class PlayableItemViewModel {
-//    var playableItem: PlayableItem
+public class StationsViewModel {
     var displayableItem: DisplayableItem?
-    var tableView: UITableView
-    
-//    init(playableItem: PlayableItem) {
-//        self.playableItem = playableItem
-//    }
 
-    init(table: UITableView) {
-        self.tableView = table
+    weak var displayablesUpdatedDelegate: DisplayablesUpdatedDelegate?
+    
+    init() {
         fetchDisplayableItems()
     }
     
-//    var primaryTitle: String {
-//        return playableItem.primaryTitle
-//    }
-//
-//    var secondaryTitle: String {
-//        return playableItem.secondaryTitle
-//    }
-//
-//    var image: UIImage {
-//        return playableItem.image
-//    }
-//
-//    var image_url: String {
-//        return playableItem.image_url
-//    }
     
-
     func fetchDisplayableItems() {
         let session = URLSession.shared
         let url = URL(string: "https://iplayer-radio-mobile-appconfig.files.bbci.co.uk/appconfig/cap/ios/1.6.0/config.json")!
@@ -116,10 +97,10 @@ public class PlayableItemViewModel {
                     self.displayableItem = try decoderData.decode(DisplayableItem.self, from: data2)
                     
                     self.displayableItem!.data = self.displayableItem!.data.map({
-                        Data(image_url: $0.image_url.replacingOccurrences(of: "{recipe}", with: "320x320"), titles: $0.titles, id: $0.id)
+                        RMSPlayableItem(image_url: $0.image_url.replacingOccurrences(of: "{recipe}", with: "320x320"), titles: $0.titles, id: $0.id)
                     })
                     DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                        self.displayablesUpdatedDelegate?.displayablesUpdated()
 //                        return self.displayableItem
                     }
                     

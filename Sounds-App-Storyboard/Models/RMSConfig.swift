@@ -10,23 +10,25 @@ import Foundation
 
 struct AppStatus: Codable {
     var status: Status
-    var rmsConfig: RmsConfig
+    var rmsConfig: RMSConfig
 }
 
 struct Status: Codable {
     var isOn: Bool
 }
 
-struct RmsConfig: Codable {
+struct RMSConfig: Codable {
     var apiKey: String
     var rootUrl: String
 }
 
+//TODO: - Split into a seperate file
 struct DisplayableItem: Codable {
-    var data: [Data] // May need to change back to data
+    var data: [RMSPlayableItem]
 }
 
-struct Data: Codable {
+//TODO: - Create coding keys for _
+struct RMSPlayableItem: Codable {
     var image_url: String
     var titles: Title
     var id: String

@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var PlayButton: UIButton!
     @IBOutlet weak var PauseButton: UIButton!
     
-    var soundsData: Data?
+    var soundsData: RMSPlayableItem?
     var VPID: String?
     var player: BBCSMP?
     
@@ -49,10 +49,10 @@ class DetailViewController: UIViewController {
     func setUI() {
         SoundDetailLabel.text = soundsData?.titles.primary
 
-        // Load the image from remote URL
-        if let url = URL(string: soundsData!.image_url){
-            SoundImageView.load(url: url)
-        }
+//        // Load the image from remote URL
+//        if let url = URL(string: soundsData!.image_url){
+//            SoundImageView.load(url: url)
+//        }
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
