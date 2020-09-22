@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 var myCellIndex = 0
 
 // MARK: - ViewController
@@ -18,7 +15,7 @@ var myCellIndex = 0
 class StationsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var playableItemVM: StationsViewModel?
+    var stationsVM: StationsViewModel?
    
     
     // Coordinator pattern for this
@@ -37,8 +34,8 @@ class StationsViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        playableItemVM = StationsViewModel()
-        playableItemVM?.displayablesUpdatedDelegate = self
+        stationsVM = StationsViewModel()
+        stationsVM?.displayablesUpdatedDelegate = self
         
     }
 }
@@ -46,7 +43,7 @@ class StationsViewController: UIViewController {
 extension StationsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Check to see if soundsData contains any values if not return 0
-        guard let count = self.playableItemVM?.displayableItem?.data
+        guard let count = self.stationsVM?.displayableItem?.data
             .count else { return 0 }
         return count
     }
@@ -56,7 +53,7 @@ extension StationsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell") as! StationCell
         
         // Get the current array element out of soundsData.data array
-        guard let rmsPlayableItem = self.playableItemVM?.displayableItem?.data[indexPath.row]
+        guard let rmsPlayableItem = self.stationsVM?.displayableItem?.data[indexPath.row]
             else {
                 return cell
         }
@@ -71,7 +68,7 @@ extension StationsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myCellIndex = indexPath.row
-        let selectedRow = playableItemVM?.displayableItem?.data[myCellIndex]
+        let selectedRow = stationsVM?.displayableItem?.data[myCellIndex]
         performSegue(withIdentifier: "MasterToDetail", sender: selectedRow)
     }
 }

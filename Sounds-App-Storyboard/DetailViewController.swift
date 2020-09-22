@@ -13,11 +13,12 @@ import SMP
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var SoundImageView: UIImageView!
-    @IBOutlet weak var SoundDetailLabel: UILabel!
-    @IBOutlet weak var PlayButton: UIButton!
-    @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
     
+    // TODO:  - Create station view model - rename DVC to stationViewController
     var soundsData: RMSPlayableItem?
     var VPID: String?
     var player: BBCSMP?
@@ -47,12 +48,11 @@ class DetailViewController: UIViewController {
     }
     
     func setUI() {
-        SoundDetailLabel.text = soundsData?.titles.primary
+        detailLabel.text = soundsData?.titles.primary
 
-//        // Load the image from remote URL
-//        if let url = URL(string: soundsData!.image_url){
-//            SoundImageView.load(url: url)
-//        }
+        // Load the image from remote URL
+        imageView.load(url: soundsData!.image_url)
+        
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -69,8 +69,6 @@ class DetailViewController: UIViewController {
 }
 
  // MARK: - Statistics custom class
-
-
 class MiniSoundsStatisticsProvider: NSObject, BBCSMPAVStatisticsConsumer {
     func trackAVSessionStart(itemMetadata: BBCSMPItemMetadata!) {}
     func trackAVFullMediaLength(lengthInSeconds mediaLengthInSeconds: Int) {}
