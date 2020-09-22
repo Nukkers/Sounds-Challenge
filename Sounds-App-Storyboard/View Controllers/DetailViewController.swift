@@ -11,13 +11,19 @@
 import UIKit
 import SMP
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, Storyboarded {
 
-    @IBOutlet weak var SoundImageView: UIImageView!
-    @IBOutlet weak var SoundDetailLabel: UILabel!
-    @IBOutlet weak var PlayButton: UIButton!
-    @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
     
+    
+    weak var coordinator: MainCoordinator?
+    
+    // TODO:  - Create station view model - rename DVC to stationViewController
+    // Follow the same steps in StationsViewModel and full this code out into a VM
+    // This file then owwns the DetailViewContollerViewModel file and makes the calls to that file to get anything it needs
     var soundsData: RMSPlayableItem?
     var VPID: String?
     var player: BBCSMP?
@@ -47,12 +53,11 @@ class DetailViewController: UIViewController {
     }
     
     func setUI() {
-        SoundDetailLabel.text = soundsData?.titles.primary
+        detailLabel.text = soundsData?.titles.primary
 
-//        // Load the image from remote URL
-//        if let url = URL(string: soundsData!.image_url){
-//            SoundImageView.load(url: url)
-//        }
+        // Load the image from remote URL
+        imageView.load(url: soundsData!.image_url)
+        
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -62,15 +67,9 @@ class DetailViewController: UIViewController {
         player?.pause()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
 }
 
  // MARK: - Statistics custom class
-
-
 class MiniSoundsStatisticsProvider: NSObject, BBCSMPAVStatisticsConsumer {
     func trackAVSessionStart(itemMetadata: BBCSMPItemMetadata!) {}
     func trackAVFullMediaLength(lengthInSeconds mediaLengthInSeconds: Int) {}

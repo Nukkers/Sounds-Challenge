@@ -101,7 +101,6 @@ public class StationsViewModel {
                     })
                     DispatchQueue.main.async {
                         self.displayablesUpdatedDelegate?.displayablesUpdated()
-//                        return self.displayableItem
                     }
                     
                 }catch{
