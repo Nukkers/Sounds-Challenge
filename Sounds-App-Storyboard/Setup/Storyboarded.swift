@@ -12,6 +12,7 @@ protocol Storyboarded {
     static func instantiate() -> Self
 }
 
+// Any class that uses the storyboarded protocol will set its storyboard id as the ID of the class instantiating it
 extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {
         let id = String(describing: self)

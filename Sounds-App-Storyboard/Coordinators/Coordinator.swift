@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Protocol all VC have to follow
 protocol Coordinator {
     var childCoordinators: [Coordinator] {get set}
     var navigationController: UINavigationController { get set }

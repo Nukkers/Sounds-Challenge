@@ -8,7 +8,7 @@
 
 import UIKit
 
-var myCellIndex = 0
+
 
 // MARK: - ViewController
 
@@ -53,15 +53,11 @@ extension StationsViewController: UITableViewDataSource, UITableViewDelegate {
         let playableItem = PlayableItem(rmsPlayableItem: rmsPlayableItem)
         let playableItemCellVM = StationCellViewModel(playableItem: playableItem)
         cell.setStationCellVM(item: playableItemCellVM)
-        
-
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myCellIndex = indexPath.row
-        let selectedRow = (stationsVM?.displayableItem?.data[myCellIndex])!
-        print("The selected row is: \(selectedRow)")
+        let selectedRow = (stationsVM?.displayableItem?.data[indexPath.row])!
         coordinator?.displayStationDetail(to: selectedRow)
     }
 }

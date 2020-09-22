@@ -13,7 +13,6 @@ import UIKit
 
 class StationCell: UITableViewCell{
     @IBOutlet private weak var titleLabel: UILabel!
-//    @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
     func setStationCellVM(item: StationCellViewModel){

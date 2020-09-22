@@ -22,6 +22,8 @@ class DetailViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
     
     // TODO:  - Create station view model - rename DVC to stationViewController
+    // Follow the same steps in StationsViewModel and full this code out into a VM
+    // This file then owwns the DetailViewContollerViewModel file and makes the calls to that file to get anything it needs
     var soundsData: RMSPlayableItem?
     var VPID: String?
     var player: BBCSMP?
@@ -64,10 +66,6 @@ class DetailViewController: UIViewController, Storyboarded {
     @IBAction func pauseButtonTapped(_ sender: Any) {
         player?.pause()
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
     
 }
 
