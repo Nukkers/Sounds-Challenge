@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VCo-zS-SLp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NsK-28-Lzc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Stations View Controller-->
         <scene sceneID="x3k-tA-sv8">
             <objects>
-                <viewController id="NsK-28-Lzc" customClass="StationsViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StationsViewController" id="NsK-28-Lzc" customClass="StationsViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp7-MG-nP9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-4A-Uxc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="150" id="lAU-TJ-hjG" customClass="StationCell" customModule="Sounds_App_Storyboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="150"/>
@@ -61,37 +63,36 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BuG-XB-ZaJ"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tOF-4A-Uxc" firstAttribute="trailing" secondItem="BuG-XB-ZaJ" secondAttribute="trailing" id="0av-Cp-fng"/>
                             <constraint firstItem="tOF-4A-Uxc" firstAttribute="leading" secondItem="BuG-XB-ZaJ" secondAttribute="leading" id="5e1-P5-Tyo"/>
                             <constraint firstItem="tOF-4A-Uxc" firstAttribute="top" secondItem="BuG-XB-ZaJ" secondAttribute="top" id="XH8-aP-tce"/>
                             <constraint firstItem="BuG-XB-ZaJ" firstAttribute="bottom" secondItem="tOF-4A-Uxc" secondAttribute="bottom" id="doK-Zj-6Sr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BuG-XB-ZaJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="dfs-H9-JRB"/>
                     <connections>
                         <outlet property="TableView" destination="tOF-4A-Uxc" id="ZlJ-q7-7tE"/>
-                        <segue destination="EIc-cT-W2w" kind="show" identifier="MasterToDetail" id="8J3-UO-6xM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hk-Qf-bz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="-232"/>
+            <point key="canvasLocation" x="1486" y="-232"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="kEi-ya-M0q">
             <objects>
-                <viewController title="Detail View Controller" id="EIc-cT-W2w" customClass="DetailViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="Detail View Controller" id="EIc-cT-W2w" customClass="DetailViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ylp-Bg-VkR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-KS-Itn" userLabel="Sound Image View">
-                                <rect key="frame" x="76" y="197" width="240" height="128"/>
+                                <rect key="frame" x="76" y="153" width="240" height="172"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-nd-3sF" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-nd-3sF" userLabel="PlayButton">
                                 <rect key="frame" x="80" y="480" width="46" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Play"/>
@@ -108,7 +109,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-od-H4z" userLabel="PauseButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-od-H4z" userLabel="PauseButton">
                                 <rect key="frame" x="264" y="480" width="66" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Pause"/>
@@ -117,7 +118,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Cy5-YB-hgg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Cy5-YB-hgg" firstAttribute="trailing" secondItem="aOv-od-H4z" secondAttribute="trailing" constant="84" id="2LB-eD-3Ni"/>
                             <constraint firstItem="Jnk-nd-3sF" firstAttribute="baseline" secondItem="aOv-od-H4z" secondAttribute="baseline" id="634-po-BMP"/>
@@ -131,7 +133,6 @@
                             <constraint firstItem="oGw-gn-XJy" firstAttribute="top" secondItem="LPl-KS-Itn" secondAttribute="bottom" constant="65" id="iO7-9N-d5m"/>
                             <constraint firstItem="oGw-gn-XJy" firstAttribute="leading" secondItem="Cy5-YB-hgg" secondAttribute="leading" constant="20" id="xXt-0p-9rq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Cy5-YB-hgg"/>
                     </view>
                     <navigationItem key="navigationItem" id="F97-d8-hev"/>
                     <connections>
@@ -145,21 +146,13 @@
             </objects>
             <point key="canvasLocation" x="2503" y="-232"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fpt-Uk-j6h">
-            <objects>
-                <navigationController id="VCo-zS-SLp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Kv-qn-O6G">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NsK-28-Lzc" kind="relationship" relationship="rootViewController" id="MrL-Fz-GLd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rS6-tM-Qki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="435" y="-232"/>
-        </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

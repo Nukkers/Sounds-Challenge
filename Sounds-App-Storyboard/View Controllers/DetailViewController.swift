@@ -11,12 +11,15 @@
 import UIKit
 import SMP
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    
+    
+    weak var coordinator: MainCoordinator?
     
     // TODO:  - Create station view model - rename DVC to stationViewController
     var soundsData: RMSPlayableItem?
@@ -62,9 +65,9 @@ class DetailViewController: UIViewController {
         player?.pause()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
     
 }
 

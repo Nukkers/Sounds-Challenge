@@ -12,20 +12,12 @@ var myCellIndex = 0
 
 // MARK: - ViewController
 
-class StationsViewController: UIViewController {
+class StationsViewController: UIViewController, Storyboarded { 
     
     @IBOutlet weak var tableView: UITableView!
     var stationsVM: StationsViewModel?
    
-    
-    // Coordinator pattern for this
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "MasterToDetail" {
-            let destVC = segue.destination as! DetailViewController
-            destVC.soundsData = sender as? RMSPlayableItem
-        }
-    }
+    weak var coordinator: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +60,9 @@ extension StationsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myCellIndex = indexPath.row
-        let selectedRow = stationsVM?.displayableItem?.data[myCellIndex]
-        performSegue(withIdentifier: "MasterToDetail", sender: selectedRow)
+        let selectedRow = (stationsVM?.displayableItem?.data[myCellIndex])!
+        print("The selected row is: \(selectedRow)")
+        coordinator?.displayStationDetail(to: selectedRow)
     }
 }
 
@@ -78,4 +71,3 @@ extension StationsViewController: DisplayablesUpdatedDelegate {
         tableView.reloadData()
     }
 }
-
