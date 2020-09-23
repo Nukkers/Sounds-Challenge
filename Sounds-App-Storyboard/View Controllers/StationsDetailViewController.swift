@@ -34,7 +34,7 @@ class StationsDetailViewController: UIViewController, Storyboarded {
     
     func setUI() {
         detailLabel.text  = stationsDetailVM?.primaryTitle
-        // Load the image from remote URL soundsData!.image_url
+        // Load the image from remote URL
         imageView.load(url: stationsDetailVM!.image)
     }
     
