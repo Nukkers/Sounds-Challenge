@@ -24,7 +24,7 @@ class MainCoordinator: Coordinator {
     }
     
     func displayStationDetail(to item: RMSPlayableItem) {
-        let vc = DetailViewController.instantiate()
+        let vc = StationsDetailViewController.instantiate()
         vc.soundsData = item
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)

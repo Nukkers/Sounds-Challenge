@@ -14,22 +14,22 @@
             <objects>
                 <viewController storyboardIdentifier="StationsViewController" id="NsK-28-Lzc" customClass="StationsViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp7-MG-nP9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-4A-Uxc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="150" id="lAU-TJ-hjG" customClass="StationCell" customModule="Sounds_App_Storyboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lAU-TJ-hjG" id="Ta1-J8-QEA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHY-nj-Ud8" userLabel="Title Label">
-                                                    <rect key="frame" x="286" y="41" width="96" height="30"/>
+                                                    <rect key="frame" x="476" y="41" width="96" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="MP8-xz-Vrf"/>
                                                         <constraint firstAttribute="width" secondItem="bHY-nj-Ud8" secondAttribute="height" multiplier="109:34" id="xZF-Je-G0t"/>
@@ -39,7 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-D9-RTb" userLabel="Subtitle Label">
-                                                    <rect key="frame" x="340" y="90" width="42" height="30"/>
+                                                    <rect key="frame" x="530" y="90" width="42" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="iZO-jf-Xwk"/>
                                                     </constraints>
@@ -84,7 +84,7 @@
         <!--Detail View Controller-->
         <scene sceneID="kEi-ya-M0q">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" title="Detail View Controller" id="EIc-cT-W2w" customClass="DetailViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StationsDetailViewController" title="Detail View Controller" id="EIc-cT-W2w" customClass="StationsDetailViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ylp-Bg-VkR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

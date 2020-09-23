@@ -13,9 +13,10 @@
 		4E5AAA0A2510F0970040343D /* RMSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AAA092510F0970040343D /* RMSConfig.swift */; };
 		4E5AAA0D2510F1670040343D /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AAA0C2510F1670040343D /* StationsViewModel.swift */; };
 		4E5AAA0F2510FA060040343D /* PlayableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AAA0E2510FA060040343D /* PlayableItem.swift */; };
-		4E5DDB6F250BCA3200B31F28 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DDB6E250BCA3200B31F28 /* DetailViewController.swift */; };
+		4E5DDB6F250BCA3200B31F28 /* StationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */; };
 		4E7ABE9A25136E35004C3C57 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ABE9925136E35004C3C57 /* StationCell.swift */; };
 		4E7ABE9D251398C5004C3C57 /* StationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */; };
+		4E949704251B500000FE9375 /* StationsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E949703251B500000FE9375 /* StationsDetailViewModel.swift */; };
 		4EA29BAA24FF8CBE00E123C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29BA924FF8CBE00E123C1 /* AppDelegate.swift */; };
 		4EA29BAC24FF8CBE00E123C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29BAB24FF8CBE00E123C1 /* SceneDelegate.swift */; };
 		4EA29BAE24FF8CBE00E123C1 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29BAD24FF8CBE00E123C1 /* StationsViewController.swift */; };
@@ -32,9 +33,10 @@
 		4E5AAA092510F0970040343D /* RMSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSConfig.swift; sourceTree = "<group>"; };
 		4E5AAA0C2510F1670040343D /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
 		4E5AAA0E2510FA060040343D /* PlayableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableItem.swift; sourceTree = "<group>"; };
-		4E5DDB6E250BCA3200B31F28 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDetailViewController.swift; sourceTree = "<group>"; };
 		4E7ABE9925136E35004C3C57 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCellViewModel.swift; sourceTree = "<group>"; };
+		4E949703251B500000FE9375 /* StationsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDetailViewModel.swift; sourceTree = "<group>"; };
 		4EA29BA624FF8CBE00E123C1 /* Sounds-App-Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sounds-App-Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA29BA924FF8CBE00E123C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EA29BAB24FF8CBE00E123C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA29BAD24FF8CBE00E123C1 /* StationsViewController.swift */,
-				4E5DDB6E250BCA3200B31F28 /* DetailViewController.swift */,
+				4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -102,6 +104,7 @@
 			children = (
 				4E5AAA0C2510F1670040343D /* StationsViewModel.swift */,
 				4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */,
+				4E949703251B500000FE9375 /* StationsDetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -284,10 +287,11 @@
 				4E5AAA0A2510F0970040343D /* RMSConfig.swift in Sources */,
 				4EA29BAE24FF8CBE00E123C1 /* StationsViewController.swift in Sources */,
 				4E5AAA0D2510F1670040343D /* StationsViewModel.swift in Sources */,
-				4E5DDB6F250BCA3200B31F28 /* DetailViewController.swift in Sources */,
+				4E5DDB6F250BCA3200B31F28 /* StationsDetailViewController.swift in Sources */,
 				4EA29BAA24FF8CBE00E123C1 /* AppDelegate.swift in Sources */,
 				4E1D2D31251A22F5002E833B /* Coordinator.swift in Sources */,
 				4E7ABE9A25136E35004C3C57 /* StationCell.swift in Sources */,
+				4E949704251B500000FE9375 /* StationsDetailViewModel.swift in Sources */,
 				4E5AAA0F2510FA060040343D /* PlayableItem.swift in Sources */,
 				4EA29BAC24FF8CBE00E123C1 /* SceneDelegate.swift in Sources */,
 				4E1D2D38251A25E7002E833B /* MainCoordinator.swift in Sources */,
