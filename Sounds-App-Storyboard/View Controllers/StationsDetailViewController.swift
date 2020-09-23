@@ -17,7 +17,6 @@ class StationsDetailViewController: UIViewController, Storyboarded {
     @IBOutlet weak var pauseButton: UIButton!
     
     weak var coordinator: MainCoordinator?
-    var soundsData: RMSPlayableItem?
     
     var player: BBCSMP?
     var stationsDetailVM: StationsDetailViewModel?
@@ -26,22 +25,17 @@ class StationsDetailViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         setUI()
         
-        stationsDetailVM = StationsDetailViewModel()
         stationsDetailVM?.mediaPlayerReadyDelegate = self
         
-        let myId = (soundsData?.id)!
-        
-       stationsDetailVM?.setUpPlayer(id: myId)
-        
+        stationsDetailVM?.setUpPlayer()
     }
     
     func setUI() {
-        detailLabel.text = soundsData?.titles.primary
-        // Load the image from remote URL
-        imageView.load(url: soundsData!.image_url)
+        detailLabel.text  = stationsDetailVM?.primaryTitle
+        // Load the image from remote URL soundsData!.image_url
+        imageView.load(url: stationsDetailVM!.image)
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {

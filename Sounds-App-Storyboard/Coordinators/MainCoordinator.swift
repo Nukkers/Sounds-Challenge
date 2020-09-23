@@ -24,9 +24,10 @@ class MainCoordinator: Coordinator {
     }
     
     func displayStationDetail(to item: RMSPlayableItem) {
+        let stationsDetailVM = StationsDetailViewModel(data: item)
         let vc = StationsDetailViewController.instantiate()
-        vc.soundsData = item
         vc.coordinator = self
+        vc.stationsDetailVM = stationsDetailVM
         navigationController.pushViewController(vc, animated: true)
     }
 }

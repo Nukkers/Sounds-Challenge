@@ -18,9 +18,23 @@ class StationsDetailViewModel {
     weak var mediaPlayerReadyDelegate:
         MediaPlayerReadyDelegate?
     
+    var soundsData: RMSPlayableItem
     
-    func setUpPlayer(id: String) {
-        let VPID = id
+    init(data: RMSPlayableItem) {
+        self.soundsData = data
+    }
+    
+    public var primaryTitle: String {
+        return soundsData.titles.primary
+    }
+    
+    public var image: String {
+        return soundsData.image_url
+    }
+    
+    
+    func setUpPlayer() {
+        let VPID = soundsData.id
 
         let playerItemProvider =
             MediaSelectorItemProviderBuilder(
