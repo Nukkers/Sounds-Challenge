@@ -26,7 +26,7 @@ class StationsViewController: UIViewController, Storyboarded {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        stationsVM = StationsViewModel()
+//        stationsVM = StationsViewModel()
         stationsVM?.displayablesUpdatedDelegate = self
         
     }

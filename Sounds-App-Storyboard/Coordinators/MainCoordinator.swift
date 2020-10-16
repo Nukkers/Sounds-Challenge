@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: Coordinator, AppConfigUpdatedDelegate {
+    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -17,9 +18,11 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = StationsViewController.instantiate()
+        let vc = RequestAppConfigViewController.instantiate()
+        let requestAppConfigVM = RequestAppConfigViewModel()
         vc.coordinator = self
-    
+        vc.requestAppConfigVM = requestAppConfigVM
+        requestAppConfigVM.appConfigUpdatedDelegate = self
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -29,5 +32,13 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         vc.stationsDetailVM = stationsDetailVM
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func appConfigUpdated(apiKey: String, rootUrl: String) {
+        let stationsVM = StationsViewModel(apiKey: apiKey, rootUrl: rootUrl)
+        let vc = StationsViewController.instantiate()
+        vc.coordinator = self
+        vc.stationsVM = stationsVM
+        navigationController.viewControllers = [vc]
     }
 }

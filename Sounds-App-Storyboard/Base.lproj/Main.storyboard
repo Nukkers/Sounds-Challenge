@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NsK-28-Lzc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cFm-9h-f2v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,12 +9,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Request App Config View Controller-->
+        <scene sceneID="4E8-D2-1Pu">
+            <objects>
+                <viewController storyboardIdentifier="RequestAppConfigViewController" id="cFm-9h-f2v" customClass="RequestAppConfigViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etJ-XJ-3ih">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tp-to-DE8">
+                                <rect key="frame" x="50" y="461" width="314" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Try again"/>
+                                <connections>
+                                    <action selector="tryAgainButtonTapped:" destination="cFm-9h-f2v" eventType="touchUpInside" id="4g3-WJ-LO5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTR-Lc-ApH">
+                                <rect key="frame" x="50" y="341" width="294" height="100"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9sO-7G-cEp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xBC-VH-2oa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Tp-to-DE8" firstAttribute="leading" secondItem="xBC-VH-2oa" secondAttribute="leading" constant="50" id="KHM-nO-CgK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BTR-Lc-ApH" secondAttribute="trailing" constant="50" id="myK-Wh-zkw"/>
+                            <constraint firstItem="xBC-VH-2oa" firstAttribute="trailing" secondItem="2Tp-to-DE8" secondAttribute="trailing" constant="50" id="nAU-bT-hxD"/>
+                            <constraint firstItem="BTR-Lc-ApH" firstAttribute="leading" secondItem="xBC-VH-2oa" secondAttribute="leading" constant="50" id="vW8-cu-7Pg"/>
+                            <constraint firstItem="BTR-Lc-ApH" firstAttribute="top" secondItem="xBC-VH-2oa" secondAttribute="top" constant="297" id="yqi-Q6-kux"/>
+                            <constraint firstItem="2Tp-to-DE8" firstAttribute="top" secondItem="BTR-Lc-ApH" secondAttribute="bottom" constant="20" id="yrj-Gd-es2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingTextView" destination="BTR-Lc-ApH" id="TG6-E6-9SA"/>
+                        <outlet property="tryAgainButton" destination="2Tp-to-DE8" id="a1W-qk-KeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vt-6A-Tfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.73913043478262" y="-245.08928571428569"/>
+        </scene>
         <!--Stations View Controller-->
         <scene sceneID="x3k-tA-sv8">
             <objects>
                 <viewController storyboardIdentifier="StationsViewController" id="NsK-28-Lzc" customClass="StationsViewController" customModule="Sounds_App_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp7-MG-nP9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-4A-Uxc">

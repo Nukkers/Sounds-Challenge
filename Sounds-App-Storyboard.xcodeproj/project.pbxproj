@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E03927D25372D3500919812 /* RequestAppConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03927C25372D3500919812 /* RequestAppConfigViewController.swift */; };
+		4E13E1C72535BEF700961DCB /* RequestAppConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13E1C62535BEF700961DCB /* RequestAppConfigViewModel.swift */; };
 		4E1D2D31251A22F5002E833B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D2D30251A22F5002E833B /* Coordinator.swift */; };
 		4E1D2D34251A2378002E833B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D2D33251A2378002E833B /* Storyboarded.swift */; };
 		4E1D2D38251A25E7002E833B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D2D37251A25E7002E833B /* MainCoordinator.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E03927C25372D3500919812 /* RequestAppConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppConfigViewController.swift; sourceTree = "<group>"; };
+		4E13E1C62535BEF700961DCB /* RequestAppConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppConfigViewModel.swift; sourceTree = "<group>"; };
 		4E1D2D30251A22F5002E833B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4E1D2D33251A2378002E833B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		4E1D2D37251A25E7002E833B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			children = (
 				4EA29BAD24FF8CBE00E123C1 /* StationsViewController.swift */,
 				4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */,
+				4E03927C25372D3500919812 /* RequestAppConfigViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				4E5AAA0C2510F1670040343D /* StationsViewModel.swift */,
 				4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */,
 				4E949703251B500000FE9375 /* StationsDetailViewModel.swift */,
+				4E13E1C62535BEF700961DCB /* RequestAppConfigViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -290,11 +296,13 @@
 				4E5DDB6F250BCA3200B31F28 /* StationsDetailViewController.swift in Sources */,
 				4EA29BAA24FF8CBE00E123C1 /* AppDelegate.swift in Sources */,
 				4E1D2D31251A22F5002E833B /* Coordinator.swift in Sources */,
+				4E13E1C72535BEF700961DCB /* RequestAppConfigViewModel.swift in Sources */,
 				4E7ABE9A25136E35004C3C57 /* StationCell.swift in Sources */,
 				4E949704251B500000FE9375 /* StationsDetailViewModel.swift in Sources */,
 				4E5AAA0F2510FA060040343D /* PlayableItem.swift in Sources */,
 				4EA29BAC24FF8CBE00E123C1 /* SceneDelegate.swift in Sources */,
 				4E1D2D38251A25E7002E833B /* MainCoordinator.swift in Sources */,
+				4E03927D25372D3500919812 /* RequestAppConfigViewController.swift in Sources */,
 				4E7ABE9D251398C5004C3C57 /* StationCellViewModel.swift in Sources */,
 				4E1D2D34251A2378002E833B /* Storyboarded.swift in Sources */,
 			);
