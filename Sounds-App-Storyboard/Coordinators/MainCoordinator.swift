@@ -19,7 +19,9 @@ class MainCoordinator: Coordinator, AppConfigUpdatedDelegate {
     
     func start() {
         let vc = RequestAppConfigViewController.instantiate()
-        let requestAppConfigVM = RequestAppConfigViewModel()
+        let appConfigRepository = AppConfigRepository()
+        let appConfigService = AppConfigService(appConfigRepository: appConfigRepository)
+        let requestAppConfigVM = RequestAppConfigViewModel(appConfigService: appConfigService)
         vc.coordinator = self
         vc.requestAppConfigVM = requestAppConfigVM
         requestAppConfigVM.appConfigUpdatedDelegate = self

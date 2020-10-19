@@ -21,11 +21,11 @@ class RequestAppConfigViewController: UIViewController, Storyboarded {
     }
     override func viewDidLoad() {
         tryAgainButton.isHidden = true
-        requestAppConfigVM?.getAppConfig()
+        requestAppConfigVM?.loadAppConfig()
     }
     
     @IBAction func tryAgainButtonTapped(_ sender: Any) {
-        requestAppConfigVM?.getAppConfig()
+        requestAppConfigVM?.loadAppConfig()
     }
 }
 

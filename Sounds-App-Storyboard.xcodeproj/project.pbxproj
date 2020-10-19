@@ -18,6 +18,8 @@
 		4E5DDB6F250BCA3200B31F28 /* StationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */; };
 		4E7ABE9A25136E35004C3C57 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ABE9925136E35004C3C57 /* StationCell.swift */; };
 		4E7ABE9D251398C5004C3C57 /* StationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */; };
+		4E9385D62539D427005202F9 /* AppConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9385D52539D427005202F9 /* AppConfigService.swift */; };
+		4E9385D92539D58F005202F9 /* AppConfigRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9385D82539D58F005202F9 /* AppConfigRepository.swift */; };
 		4E949704251B500000FE9375 /* StationsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E949703251B500000FE9375 /* StationsDetailViewModel.swift */; };
 		4EA29BAA24FF8CBE00E123C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29BA924FF8CBE00E123C1 /* AppDelegate.swift */; };
 		4EA29BAC24FF8CBE00E123C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29BAB24FF8CBE00E123C1 /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 		4E5DDB6E250BCA3200B31F28 /* StationsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDetailViewController.swift; sourceTree = "<group>"; };
 		4E7ABE9925136E35004C3C57 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		4E7ABE9C251398C5004C3C57 /* StationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCellViewModel.swift; sourceTree = "<group>"; };
+		4E9385D52539D427005202F9 /* AppConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigService.swift; sourceTree = "<group>"; };
+		4E9385D82539D58F005202F9 /* AppConfigRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigRepository.swift; sourceTree = "<group>"; };
 		4E949703251B500000FE9375 /* StationsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDetailViewModel.swift; sourceTree = "<group>"; };
 		4EA29BA624FF8CBE00E123C1 /* Sounds-App-Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sounds-App-Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA29BA924FF8CBE00E123C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4E9385D32539D2F1005202F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4E9385D52539D427005202F9 /* AppConfigService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4E9385D42539D363005202F9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4E9385D82539D58F005202F9 /* AppConfigRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		4EA29B9D24FF8CBE00E123C1 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +164,8 @@
 		4EA29BA824FF8CBE00E123C1 /* Sounds-App-Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				4E9385D42539D363005202F9 /* Repository */,
+				4E9385D32539D2F1005202F9 /* Services */,
 				4E1D2D3D251A2CD0002E833B /* Setup */,
 				4E1D2D3C251A2CBB002E833B /* Coordinators */,
 				4E1D2D3B251A2C9D002E833B /* View Controllers */,
@@ -294,11 +316,13 @@
 				4EA29BAE24FF8CBE00E123C1 /* StationsViewController.swift in Sources */,
 				4E5AAA0D2510F1670040343D /* StationsViewModel.swift in Sources */,
 				4E5DDB6F250BCA3200B31F28 /* StationsDetailViewController.swift in Sources */,
+				4E9385D92539D58F005202F9 /* AppConfigRepository.swift in Sources */,
 				4EA29BAA24FF8CBE00E123C1 /* AppDelegate.swift in Sources */,
 				4E1D2D31251A22F5002E833B /* Coordinator.swift in Sources */,
 				4E13E1C72535BEF700961DCB /* RequestAppConfigViewModel.swift in Sources */,
 				4E7ABE9A25136E35004C3C57 /* StationCell.swift in Sources */,
 				4E949704251B500000FE9375 /* StationsDetailViewModel.swift in Sources */,
+				4E9385D62539D427005202F9 /* AppConfigService.swift in Sources */,
 				4E5AAA0F2510FA060040343D /* PlayableItem.swift in Sources */,
 				4EA29BAC24FF8CBE00E123C1 /* SceneDelegate.swift in Sources */,
 				4E1D2D38251A25E7002E833B /* MainCoordinator.swift in Sources */,
