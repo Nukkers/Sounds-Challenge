@@ -21,7 +21,7 @@ class RequestAppConfigViewModel {
     weak var appConfigViewDelegate: AppConfigViewDelegate?
     weak var appConfigUpdatedDelegate: AppConfigUpdatedDelegate?
     
-    weak var appConfigService: AppConfigServiceProtocol?
+    private let appConfigService: AppConfigServiceProtocol?
     
     init(appConfigService: AppConfigServiceProtocol) {
         self.appConfigService = appConfigService

@@ -29,7 +29,6 @@ class AppConfigRepository: AppConfigRepositoryProtocol {
                     if error != nil || data == nil {
                         print("Client error!")
                         DispatchQueue.main.async {
-//                            self.appConfigViewDelegate?.appConfigFailed(message: "Client Error \(error)")
                             completion("", "", false)
                         }
                         return
@@ -42,7 +41,6 @@ class AppConfigRepository: AppConfigRepositoryProtocol {
                     guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
                         print("Server error!")
                         DispatchQueue.main.async {
-//                            self.appConfigViewDelegate?.appConfigFailed(message: "Server error.")
                             completion("", "", false)
                         }
                         return
@@ -52,7 +50,6 @@ class AppConfigRepository: AppConfigRepositoryProtocol {
                     guard let mime = response.mimeType, mime == "application/json" else {
                         print("Wrong MIME type!")
                         DispatchQueue.main.async {
-//                            self.appConfigViewDelegate?.appConfigFailed(message: "Wrong MIME type error.")
                             completion("", "", false)
                         }
                         return
@@ -64,12 +61,10 @@ class AppConfigRepository: AppConfigRepositoryProtocol {
                         self.rootUrl = self.appStatus?.rmsConfig.rootUrl ?? "ERROR"
                         // Successfull result received
                         DispatchQueue.main.async {
-//                            self.appConfigUpdatedDelegate?.appConfigUpdated(apiKey: self.apiKey, rootUrl: self.rootUrl)
                             completion(self.apiKey, self.rootUrl, true)
                         }
                     } catch {
                         DispatchQueue.main.async {
-//                            self.appConfigViewDelegate?.appConfigFailed(message: "Unable to decode JSON response. Error description: \(error.localizedDescription)")
                             completion("", "", false)
                         }
                         print(error.localizedDescription)
