@@ -27,8 +27,19 @@
 		4EA29BB124FF8CBE00E123C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA29BAF24FF8CBE00E123C1 /* Main.storyboard */; };
 		4EA29BB324FF8CBF00E123C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA29BB224FF8CBF00E123C1 /* Assets.xcassets */; };
 		4EA29BB624FF8CBF00E123C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA29BB424FF8CBF00E123C1 /* LaunchScreen.storyboard */; };
+		4EDF2C40253DA1900053C10F /* RequestAppConfigViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF2C2C253D9E750053C10F /* RequestAppConfigViewModelTests.swift */; };
 		AA59AA29AD4B7C6CB9B9E1AF /* Pods_Sounds_App_Storyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD93DE87F4AAC2827A295686 /* Pods_Sounds_App_Storyboard.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EDF2C39253DA0EF0053C10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EA29B9E24FF8CBE00E123C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EA29BA524FF8CBE00E123C1;
+			remoteInfo = "Sounds-App-Storyboard";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4E03927C25372D3500919812 /* RequestAppConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppConfigViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +64,9 @@
 		4EA29BB224FF8CBF00E123C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EA29BB524FF8CBF00E123C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EA29BB724FF8CBF00E123C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EDF2C2C253D9E750053C10F /* RequestAppConfigViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppConfigViewModelTests.swift; sourceTree = "<group>"; };
+		4EDF2C34253DA0EF0053C10F /* Sounds-App-StoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sounds-App-StoryboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDF2C38253DA0EF0053C10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE49C64528B9EE6C99883915 /* Pods-Sounds-App-Storyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sounds-App-Storyboard.release.xcconfig"; path = "Target Support Files/Pods-Sounds-App-Storyboard/Pods-Sounds-App-Storyboard.release.xcconfig"; sourceTree = "<group>"; };
 		DB0BF46994457ECD0A5CA192 /* Pods-Sounds-App-Storyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sounds-App-Storyboard.debug.xcconfig"; path = "Target Support Files/Pods-Sounds-App-Storyboard/Pods-Sounds-App-Storyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		DD93DE87F4AAC2827A295686 /* Pods_Sounds_App_Storyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sounds_App_Storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA59AA29AD4B7C6CB9B9E1AF /* Pods_Sounds_App_Storyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDF2C31253DA0EF0053C10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +171,7 @@
 				52693E87DC622095063D43C7 /* Pods */,
 				4EA29BA724FF8CBE00E123C1 /* Products */,
 				4EA29BA824FF8CBE00E123C1 /* Sounds-App-Storyboard */,
+				4EDF2C35253DA0EF0053C10F /* Sounds-App-StoryboardTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA29BA624FF8CBE00E123C1 /* Sounds-App-Storyboard.app */,
+				4EDF2C34253DA0EF0053C10F /* Sounds-App-StoryboardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +201,15 @@
 				4EA29BB724FF8CBF00E123C1 /* Info.plist */,
 			);
 			path = "Sounds-App-Storyboard";
+			sourceTree = "<group>";
+		};
+		4EDF2C35253DA0EF0053C10F /* Sounds-App-StoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF2C2C253D9E750053C10F /* RequestAppConfigViewModelTests.swift */,
+				4EDF2C38253DA0EF0053C10F /* Info.plist */,
+			);
+			path = "Sounds-App-StoryboardTests";
 			sourceTree = "<group>";
 		};
 		52693E87DC622095063D43C7 /* Pods */ = {
@@ -219,18 +251,40 @@
 			productReference = 4EA29BA624FF8CBE00E123C1 /* Sounds-App-Storyboard.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EDF2C33253DA0EF0053C10F /* Sounds-App-StoryboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF2C3B253DA0EF0053C10F /* Build configuration list for PBXNativeTarget "Sounds-App-StoryboardTests" */;
+			buildPhases = (
+				4EDF2C30253DA0EF0053C10F /* Sources */,
+				4EDF2C31253DA0EF0053C10F /* Frameworks */,
+				4EDF2C32253DA0EF0053C10F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EDF2C3A253DA0EF0053C10F /* PBXTargetDependency */,
+			);
+			name = "Sounds-App-StoryboardTests";
+			productName = "Sounds-App-StoryboardTests";
+			productReference = 4EDF2C34253DA0EF0053C10F /* Sounds-App-StoryboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4EA29B9E24FF8CBE00E123C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Naukhez Ali";
 				TargetAttributes = {
 					4EA29BA524FF8CBE00E123C1 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					4EDF2C33253DA0EF0053C10F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 4EA29BA524FF8CBE00E123C1;
 					};
 				};
 			};
@@ -248,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				4EA29BA524FF8CBE00E123C1 /* Sounds-App-Storyboard */,
+				4EDF2C33253DA0EF0053C10F /* Sounds-App-StoryboardTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +315,13 @@
 				4EA29BB624FF8CBF00E123C1 /* LaunchScreen.storyboard in Resources */,
 				4EA29BB324FF8CBF00E123C1 /* Assets.xcassets in Resources */,
 				4EA29BB124FF8CBE00E123C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDF2C32253DA0EF0053C10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +394,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EDF2C30253DA0EF0053C10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDF2C40253DA1900053C10F /* RequestAppConfigViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EDF2C3A253DA0EF0053C10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EA29BA524FF8CBE00E123C1 /* Sounds-App-Storyboard */;
+			targetProxy = 4EDF2C39253DA0EF0053C10F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4EA29BAF24FF8CBE00E123C1 /* Main.storyboard */ = {
@@ -506,6 +584,50 @@
 			};
 			name = Release;
 		};
+		4EDF2C3C253DA0EF0053C10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AN749835U;
+				INFOPLIST_FILE = "Sounds-App-StoryboardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sounds-App-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sounds-App-Storyboard.app/Sounds-App-Storyboard";
+			};
+			name = Debug;
+		};
+		4EDF2C3D253DA0EF0053C10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AN749835U;
+				INFOPLIST_FILE = "Sounds-App-StoryboardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sounds-App-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sounds-App-Storyboard.app/Sounds-App-Storyboard";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +645,15 @@
 			buildConfigurations = (
 				4EA29BBB24FF8CBF00E123C1 /* Debug */,
 				4EA29BBC24FF8CBF00E123C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF2C3B253DA0EF0053C10F /* Build configuration list for PBXNativeTarget "Sounds-App-StoryboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDF2C3C253DA0EF0053C10F /* Debug */,
+				4EDF2C3D253DA0EF0053C10F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

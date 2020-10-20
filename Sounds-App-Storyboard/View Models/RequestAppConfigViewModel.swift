@@ -17,7 +17,7 @@ protocol AppConfigViewDelegate: class {
 }
 
 class RequestAppConfigViewModel {
-
+    
     weak var appConfigViewDelegate: AppConfigViewDelegate?
     weak var appConfigUpdatedDelegate: AppConfigUpdatedDelegate?
     
@@ -35,6 +35,8 @@ class RequestAppConfigViewModel {
             } else {
                 self.appConfigViewDelegate?.appConfigFailed(message: "Failed to get app config. Try again later.")
             }
+            
+            
         }
     }
 }

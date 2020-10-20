@@ -24,52 +24,51 @@ class AppConfigRepository: AppConfigRepositoryProtocol {
     func config(completion: @escaping (String, String, Bool) -> Void) {
         
         let task = session.dataTask(with: url) { data, response, error in
-                    
-                    // check if we have any errors
-                    if error != nil || data == nil {
-                        print("Client error!")
-                        DispatchQueue.main.async {
-                            completion("", "", false)
-                        }
-                        return
-                    }
-                    
-                    guard let data = data else { return }
-                    
-                    // Check the response is of type HTTPURLResponse &&
-                    // statusCode is between 200-299
-                    guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                        print("Server error!")
-                        DispatchQueue.main.async {
-                            completion("", "", false)
-                        }
-                        return
-                    }
-                    
-                    // Check if the application type is JSON
-                    guard let mime = response.mimeType, mime == "application/json" else {
-                        print("Wrong MIME type!")
-                        DispatchQueue.main.async {
-                            completion("", "", false)
-                        }
-                        return
-                    }
-                    let decoder = JSONDecoder()
-                    do {
-                        self.appStatus = try decoder.decode(AppStatus.self, from: data)
-                        self.apiKey = self.appStatus?.rmsConfig.apiKey ?? "ERROR"
-                        self.rootUrl = self.appStatus?.rmsConfig.rootUrl ?? "ERROR"
-                        // Successfull result received
-                        DispatchQueue.main.async {
-                            completion(self.apiKey, self.rootUrl, true)
-                        }
-                    } catch {
-                        DispatchQueue.main.async {
-                            completion("", "", false)
-                        }
-                        print(error.localizedDescription)
-                    }
+            
+            // check if we have any errors
+            if error != nil || data == nil {
+                print("Client error!")
+                DispatchQueue.main.async {
+                    completion("", "", false)
                 }
-                task.resume()
+                return
             }
+            
+            guard let data = data else { return }
+            
+            // Check the response is of type HTTPURLResponse &&
+            // statusCode is between 200-299
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                DispatchQueue.main.async {
+                    completion("", "", false)
+                }
+                return
+            }
+            
+            // Check if the application type is JSON
+            guard let mime = response.mimeType, mime == "application/json" else {
+                print("Wrong MIME type!")
+                DispatchQueue.main.async {
+                    completion("", "", false)
+                }
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                self.appStatus = try decoder.decode(AppStatus.self, from: data)
+                self.apiKey = self.appStatus?.rmsConfig.apiKey ?? "ERROR"
+                self.rootUrl = self.appStatus?.rmsConfig.rootUrl ?? "ERROR"
+                // Successfull result received
+                DispatchQueue.main.async {
+                    completion(self.apiKey, self.rootUrl, true)
+                }
+
+            } catch {
+                completion("", "", false)
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+    }
 }

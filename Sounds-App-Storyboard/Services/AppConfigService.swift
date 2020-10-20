@@ -14,9 +14,9 @@ protocol AppConfigServiceProtocol: class {
 
 
 class AppConfigService: AppConfigServiceProtocol {
-    private let appConfigRepository: AppConfigRepository
+    private let appConfigRepository: AppConfigRepositoryProtocol
     
-    init(appConfigRepository: AppConfigRepository) {
+    init(appConfigRepository: AppConfigRepositoryProtocol) {
         self.appConfigRepository = appConfigRepository
     }
 
