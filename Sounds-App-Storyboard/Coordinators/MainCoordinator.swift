@@ -37,7 +37,10 @@ class MainCoordinator: Coordinator, AppConfigUpdatedDelegate {
     }
     
     func appConfigUpdated(apiKey: String, rootUrl: String) {
-        let stationsVM = StationsViewModel(apiKey: apiKey, rootUrl: rootUrl)
+        let displayableItemsRepository = DisplayableItemsRepository(apiKey: apiKey, rootUrl: rootUrl)
+        let displayableItemsService = DisplayableItemsService(displayableItemsRepository: displayableItemsRepository)
+
+        let stationsVM = StationsViewModel(displayableItemsService: displayableItemsService)
         let vc = StationsViewController.instantiate()
         vc.coordinator = self
         vc.stationsVM = stationsVM
